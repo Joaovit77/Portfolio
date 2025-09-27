@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    transition: font-size 1s ease;   
+}
+
+header{
+    padding: 20px;
+    border-bottom: 20px solid;
+    border-image: linear-gradient(to right, red, orange, yellow) 1;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
+}
+
+header p{
+    text-align: center;
+}
+
+
+h1, h2{
+    text-align:left;
+    text-indent: 1.8rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.466)
+    
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    text-shadow: 2px 3px 3px rgba(255, 255, 255, 0.39);
+}
+
+section.flex-content{
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.24);
+    background-color: rgba(211, 211, 211, 0.644);
+}
+
+
+article.text-media{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-top:1px solid rgba(0, 0, 0, 0.226) ;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
+    max-width: 900px;
+    margin: auto;
+    background-color:rgba(255, 255, 255, 0.425) ;
+    transition: max-width 0.7s ease;
+}
+
+
+article.media-text{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.034);
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.425);
+    transition: max-width 0.7s ease;
+}
+
+
+article > div.text{
+    flex: 1 1 300px;
+    padding: 10px;
+}
+
+article > div.media{
+    flex:  1 1 300px;
+}
+
+div.media > img{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 210px;
+    padding: 10px 10px 30px 10px;
+    aspect-ratio: 16 / 9;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.418);
+    border-radius: 10px;
+    
+}
+
+footer p#rodape{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media screen and (min-width:650px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    
+    p#primeiro{
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    p{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h1{
+        font-size: 1.5rem;
+    
+    }
+}    
