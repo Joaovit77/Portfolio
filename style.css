@@ -10,16 +10,17 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem; 
-    transition: font-size 1s ease;   
+    transition: font-size 1s ease; 
 }
 
 header{
-    padding: 10px 0px 30px 10px;
+    padding: 10px 10px 30px 10px;
     border-bottom: 20px solid;
     border-image: linear-gradient(to right, red, orange, yellow) 1;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
     display: flex;
     flex-flow: row nowrap;
+
 }
 
 header h1{
@@ -44,10 +45,11 @@ nav{
 
 nav > span{
     text-align: right;
-    padding-right: 10px;
     cursor: pointer;
     display: block;
     width: 150px;
+    padding-right: 30px;   
+    flex: 1 1 auto;
 }
 
 nav > span:hover{
@@ -66,6 +68,7 @@ nav a{
     padding: 10px;
     width: 150px;
     border-radius: 3px;
+    flex: 1 1 auto;
 }
 
 nav a:hover{
@@ -173,6 +176,7 @@ footer p#rodape{
 
 
 
+
 @media screen and (min-width:650px) {
     h1{
         font-size: 2rem;
@@ -205,3 +209,24 @@ footer p#rodape{
     
     }
 }    
+
+@media screen and (max-width:466px) {
+    header{
+        flex-wrap: wrap;
+    }
+
+    p#primeiro{
+        order: 5;
+        align-self: flex-end;
+    }
+
+    nav{
+        order: 2;
+        margin: auto;
+    }
+
+    nav span{
+        text-align: center;
+        padding: 0;
+    }
+}
