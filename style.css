@@ -124,7 +124,7 @@ footer p#rodape{
 
 @media screen and (min-width:650px) {
     h1{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     p#primeiro{
@@ -139,9 +139,9 @@ footer p#rodape{
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:500px) {
     h1{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     
     }
 
