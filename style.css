@@ -70,7 +70,7 @@ article.text-media{
 
 article.media-text{
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: column-reverse wrap;
     justify-content: space-between;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.034);
     max-width: 900px;
@@ -85,9 +85,21 @@ article > div.text{
     padding: 10px;
 }
 
+h2#cristo{
+
+    margin-top: 5px;
+    height: 30px;
+    font-size: 2.2rem;
+}
+
+
+
+
 article > div.media{
     flex:  1 1 300px;
 }
+
+
 
 div.media > img{
     display: block;
@@ -129,7 +141,11 @@ footer p#rodape{
 
 @media screen and (max-width:480px) {
     h1{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     
+    }
+
+    h2#cristo{
+        text-align: center;
     }
 }    
