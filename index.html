@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Portfólio Dev João Vitor Pinto</h1>
         <p id="primeiro">Olá! Sou João Vitor Pinto, desenvolvedor web focado em HTML5, CSS e JavaScript. Crio sites responsivos e modernos, unindo design e funcionalidade para oferecer experiências digitais eficientes.</p>
-        
         <nav>
             <span onclick="clickMenu()" class="material-symbols-outlined">menu</span>
-            <a class="itens" href="#">GitHub</a>
-            <a class="itens" href="#">Instagram</a>
-            <a class="itens" href="#">Linkedin</a>
-            <a class="itens" href="#">E-mail</a>
+            <div id="link">
+                <a class="itens" href="#">GitHub</a>
+                <a class="itens" href="#">Instagram</a>
+                <a class="itens" href="#">Linkedin</a>
+                <a class="itens" href="#">E-mail</a>
+            </div>
         </nav>
     </header>
     
@@ -74,16 +75,27 @@
 
 
     <script>
-        let itens = document.querySelectorAll('.itens');
+        const link = document.getElementById('link');
+        let paragrafo = document.getElementById('primeiro');
+
         function clickMenu(){
-            itens.forEach(el => {
-                if (el.style.display == 'block'){
-                    el.style.display = 'none'
-                } else {
-                    el.style.display = 'block'
-                }
-            });
+            if (link.style.display === 'none' || link.style.display === ''){
+                link.style.display = 'flex'
+            } else{
+                link.style.display = 'none'
+            }
         }
+
+        function mudouTamanho(){
+            if (window.innerWidth >= 700){
+                link.style.display = 'flex'
+            } else{
+                link.style.display = 'none'
+            }
+        }
+
+
+
     </script>
 </body>
 </html>
